@@ -92,3 +92,13 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+
+        env:
+  AWS_REGION: us-east-1                     # exemplo de região
+  ECR_REPOSITORY: meu-repositorio-ecr       # nome do repositório ECR
+  ECS_SERVICE: meu-servico-ecs              # nome do serviço no ECS
+  ECS_CLUSTER: meu-cluster-ecs              # nome do cluster no ECS
+  ECS_TASK_DEFINITION: .aws/task-def.json   # caminho para a task definition JSON
+  CONTAINER_NAME: meu-container             # nome do container na task definition
+
+
